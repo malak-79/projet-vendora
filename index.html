@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="index.js"></script>
+</head>
+<body>
+    
+    <h1>Formulaire de commande </h1>
+    <p> Remplir formulaire ci-dessous.</p>
+    <!-- formulaire -->
+     <section>
+        <fieldset>
+        <form>
+            <h3>Formulaire</h3>
+            <!-- Nom -->
+            <label for="nom">Nom:</label>
+            <input type="text" id="nom" name="nom" required>
+           <!-- Prenom -->
+            <label for="prenom">Prénom:</label>
+            <input type="text" id="prenom" name="prenom" required>
+           <!-- Code Postal -->
+            <label for="codePostal">Code Postal:</label>
+            <input type="text" id="codePostal" name="codePostal" required>
+           <!-- N°tele -->
+            <label for="N°Tele">N°Tele:</label>
+            <input type="tel" id="N°Tele" name="N°Tele" required>
+            <!-- Quantite -->
+            <label for="quantite">Quantité:</label>
+            <input type="number" id="quantite" name="quantite" oninput="calculerTotal()" min="1" >
+            <!-- prix unitaire -->
+             <input type="hidden" id="PrixUnitaire" value="200">
+            <!-- total -->
+            <label for="total">Total (Dh):</label>
+            <input type="text" id="total" name="total" readonly>
+            <!-- annuler commander -->
+            <div class="btn">
+                <input type="reset" value="Annuler" >
+                <input type="submit" value="Commander" class="commander">
+            </div>
+        </form>
+    </fieldset>  
+    </section>    
+</body>
+</html>
