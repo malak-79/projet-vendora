@@ -1,104 +1,197 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="presentation.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+        rel="stylesheet">
     <title>vendora</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
-    </head>
+</head>
+
 <body>
-    <div class="nav"> 
-        <img src="White And Black Modern Abstract Beauty Logo.png" class="logo"><h1>vendora</h1>
-    <ul class="list">
-        <li><a href="">Accueil</a></li>
-        <li><a href="" >Contacts</a></li>
-        <li><a href="">Produits</a></li>
-    </ul></div>
-    
-    <main>
-        <section class="promo-description"> <h2 class="promo-title">Découvrez l'élégance et la sophistication avec Vendora</h2> <p class="promo-text"> Chez Vendora, nous croyons que chaque femme mérite de se sentir spéciale. Nos produits sont conçus avec soin et précision pour offrir une qualité exceptionnelle et un style inégalé. Que vous cherchiez une montre élégante ou un sac à main chic, nous avons ce qu'il vous faut pour sublimer votre quotidien. Explorez notre collection et trouvez l'accessoire 
-            parfait qui complètera votre tenue avec élégance et raffinement. </p> </section>
+    <div class="nav">
+        <img src="White And Black Modern Abstract Beauty Logo.png" class="logo">
+        <h1>vendora</h1>
+        <ul class="list">
+            <li><a href="">Accueil</a></li>
+            <li><a href="">Contacts</a></li>
+            <li><a href="">Produits</a></li>
+            <li><a href=""><i class="fas fa-shopping-cart" style="color: rgb(181, 137, 165); font-size:25px"></i></a></li>
+        </ul>
+    </div>
+    <section class="content">
+        <h1>Découvrez l'élégance<br> et la sophistication avec Vendora</h1>
+        <p> Chez Vendora, nous croyons que chaque femme mérite de se sentir spéciale. Nos
+             parfait qui complètera votre tenue avec élégance et raffinement. </p>
+   <button id="buy-now" class="butn" style="height: 9%;width: 20%;"><b>Acheter maintenant</b></button>
+        </section>
+
+    <!-- <main>
+        <section class="promo-description">
+            <h2 class="promo-title" style="color: rgb(198, 19, 115);">Découvrez l'élégance et la sophistication avec Vendora</h2>
+            <p class="promo-text" > Chez Vendora, nous croyons que chaque femme mérite de se sentir spéciale. Nos
+                produits sont conçus avec soin et précision pour offrir une qualité exceptionnelle et un style inégalé.
+                Que vous cherchiez une montre élégante ou un sac à main chic, nous avons ce qu'il vous faut pour
+                sublimer votre quotidien. Explorez notre collection et trouvez l'accessoire
+                parfait qui complètera votre tenue avec élégance et raffinement. </p>
+        </section> -->
         <section class="product-description">
             <div class="product-details">
                 <img src="H306eb2bd1adb46e18ff592810d1a7982F.jpg" alt="Image du produit" class="product-image">
                 <div class="product-info">
-                    <h3 id="product-name">Vendora Montre</h3>
+                    <h3 id="product-name" >Vendora Montre</h3>
                     <h3 id="product-name"></h3>
                     <p id="product-description" style="font-size: 20px;">
-                        Genève Simple femmes montres haut de gamme en acier inoxydable maille Quartz montres de mode horloge dames Montre Montre Femme
+                        Genève Simple femmes montres haut de gamme en acier inoxydable maille Quartz montres de mode
+                        horloge dames Montre Montre Femme
                     </p>
                     <h3 id="product-name">PRIX:100DH</h3>
 
-                    <button id="buy-now" class="butn">Acheter maintenant</button>
+                    <button id="buy-now" class="butn"><a
+                        href="C:\Users\lenovo i5\OneDrive\Bureau\vendora\projet-vendora-1\fomulair\index.html">
+                        Acheter maintenant</a>
+                </button>
+                    <div class="stars">
+                        <ul style="display: flex; gap: 10px;">
+                        <li>
+                            <i class="fa fa-star checked" style="color: rgb(237, 243, 69);"> </i>
+                        </li>
+                        <li>
+                            <i class="fa fa-star checked" style="color: rgb(234, 241, 12);"></i>
+                        </li>
+                        <li>
+                            <i class="fa fa-star checked" style="color: rgb(234, 241, 12);"></i>
+                        </li>
+                        <li>
+                            <i class="fa fa-star checked" style="color: rgb(234, 241, 12);"></i>
+                        </li>
+                        <li>
+                            <i class="fa fa-star checked" style="color: rgb(234, 241, 12);"></i>
+                        </li>
+                        
+    </ul></div>
                 </div>
             </div>
         </section>
+        
         <section class="product-description">
             <div class="product-details">
                 <img src="R.jpg" alt="Image du produit" class="product-image">
                 <div class="product-info">
                     <h3 id="product-name">Vendora Sac</h3>
                     <p id="product-description" style="font-size: 20px;">
-                        Joli sac à main en simili-cuir pour femme alliant chic et élégance, mis en valeur par une magnifique finition aspect texturé.
-                         Bien fait et très robuste – Fait de cuir synthétique </p>
+                        Joli sac à main en simili-cuir pour femme alliant chic et élégance, mis en valeur par une
+                        magnifique finition aspect texturé.
+                        Bien fait et très robuste – Fait de cuir synthétique </p>
                     <h3 id="product-name">PRIX:300DH</h3>
-
-                    <button id="buy-now" class="butn">Acheter maintenant</button>
+                  
+                    <button id="buy-now" class="butn"><a
+                        href="C:\Users\lenovo i5\OneDrive\Bureau\vendora\projet-vendora-1\fomulair\index.html">
+                        Acheter maintenant</a>
+                </button>
+                    <div class="stars">
+                        <ul style="display: flex; gap: 10px;">
+                        <li>
+                            <i class="fa fa-star checked" style="color: rgb(237, 243, 69);"> </i>
+                        </li>
+                        <li>
+                            <i class="fa fa-star checked" style="color: rgb(234, 241, 12);"></i>
+                        </li>
+                        <li>
+                            <i class="fa fa-star checked" style="color: rgb(234, 241, 12);"></i>
+                        </li>
+                        <li>
+                            <i class="fa fa-star checked" style="color: rgb(234, 241, 12);"></i>
+                        </li>
+                        <li>
+                            <i class="fa fa-star checked" style="color: rgb(234, 241, 12);"></i>
+                        </li>
+                        
+    </ul></div>
                 </div>
             </div>
         </section>
         <section class="product-description">
-            <h2>Produit sélectionné</h2>
+            
             <div class="product-details">
-                <img src="télécharger (3).jpg" alt="Image du produit" class="product-image">
+                <img src="C:\Users\lenovo i5\OneDrive\Bureau\vendora\projet-vendora-1\fomulair\cacc872b-cbbf-4a2d-8d2b-10dfa3771e08.jpg" alt="Image du produit" class="product-image">
                 <div class="product-info">
                     <h3 id="product-name">Vendora Montre</h3>
                     <p id="product-description" style="font-size: 20px;">
-                        Genève Simple femmes montres haut de gamme en acier 
+                        Genève Simple femmes montres haut de gamme en acier
                         inoxydable maille Quartz montres de mode horloge dames Montre Montre Femme
                     </p>
                     <h3 id="product-name">PRIX:100DH</h3>
 
-                    <button id="buy-now" class="butn">Acheter maintenant</button>
+                    <button id="buy-now" class="butn"><a
+                            href="C:\Users\lenovo i5\OneDrive\Bureau\vendora\projet-vendora-1\fomulair\index.html">
+                            Acheter maintenant</a>
+                    </button>
+                    <div class="stars">
+                    <ul style="display: flex; gap: 10px;">
+                    <li>
+                        <i class="fa fa-star checked" style="color: rgb(237, 243, 69);"> </i>
+                    </li>
+                    <li>
+                        <i class="fa fa-star checked" style="color: rgb(234, 241, 12);"></i>
+                    </li>
+                    <li>
+                        <i class="fa fa-star checked" style="color: rgb(234, 241, 12);"></i>
+                    </li>
+                    <li>
+                        <i class="fa fa-star checked" style="color: rgb(234, 241, 12);"></i>
+                    </li>
+                    <li>
+                        <i class="fa fa-star checked" style="color: rgb(234, 241, 12);"></i>
+                    </li>
+                    
+</ul></div>
                 </div>
             </div>
         </section>
         <div class="load-more"> <button id="load-more-btn">Afficher plus</button> </div>
     </main>
-    
+
     <footer>
         <div class="container">
             <div class="footer-content">
                 <h3>NOUS CONTACTER</h3>
                 <ul>
-                    <li><i class="fas fa-envelope email-icon"></i> Email : <a href="mailto:vendora@gmail.com" style="color: black;">vendora@gmail.com</a></li>
-                    <li><i class="fas fa-phone phone-icon"></i> Phone : <a href="tel:+1232425356" style="color: black;">+123 242 5356</a></li>
-                    <li><i class="fas fa-map-marker-alt address-icon"></i> Address : Avenue Abdelmoumen 12, Casablanca</li>
+                    <li><i class="fas fa-envelope email-icon"></i> Email : <a href="mailto:vendora@gmail.com"
+                            style="color: black;">vendora@gmail.com</a></li>
+                    <li><i class="fas fa-phone phone-icon"></i> Phone : <a href="tel:+1232425356"
+                            style="color: black;">+123 242 5356</a></li>
+                    <li><i class="fas fa-map-marker-alt address-icon"></i> Address : Avenue Abdelmoumen 12, Casablanca
+                    </li>
                 </ul>
             </div>
-            
-            
+
+
             <div class="footer-content">
                 <h3>SUIVEZ NOUS SUR</h3>
                 <ul class="social-icons" style="gap: 20px;">
-                    <li><a href="oresentation.html"><i class="fab fa-facebook" style="color: blue;"> Vendora</i></a></li>
-                    <li><a href="#"><i class="fab  fa-twitter" > Vendora</i></a></li>
-                    <li><a href="#"><i class="fab fa-linkedin" style="color: hsl(240, 100%, 50%);"> Vendora </i></a></li>
+                    <li><a href="oresentation.html"><i class="fab fa-facebook" style="color: blue;"> Vendora</i></a>
+                    </li>
+                    <li><a href="#"><i class="fab  fa-twitter"> Vendora</i></a></li>
+                    <li><a href="#"><i class="fab fa-linkedin" style="color: hsl(240, 100%, 50%);"> Vendora </i></a>
+                    </li>
                     <li><a href="#"><i class="fab fa-instagram" style="color: rgb(202, 34, 157);"> Vendora</i></a></li>
                 </ul>
             </div>
-                   
+
         </div>
-        
+
     </footer>
-    
+
     <div class="bottom-bar">
         <p>&copy; 2024 Vendora - Tous droits réservés.</p>
     </div>
-    
+
 </body>
+
 </html>
