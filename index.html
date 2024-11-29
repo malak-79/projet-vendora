@@ -3,90 +3,179 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="index.css" />
+    <title>Formulaire</title>
+    <link rel="stylesheet" href="index.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
     <title>vendora</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
-    </head>
+</head>
 <body>
-    <nav class="nav"> 
-        <img src="White And Black Modern Abstract Beauty Logo.png" class="logo"><h1>vendora</h1>
-    <ul class="list">
-        <li><a href="">Accueil</a></li>
-        <li><a href="" >Contacts</a></li>
-        <li class="dropdown">
-            <a href="#">Produits</a>
-            <ul class="dropdown-menu">
-                <li><a href="#">Catégorie 1</a></li>
-                <li><a href="#">Catégorie 2</a></li>
-            </ul>
-        </li>
-        
-    </ul></nav>
-    <h1 class="text-animation">mon titre</h1>
-  
-   
-   <main>
-        
-        <section class="">
-            <div class="section1" >
-                <img src="télécharger (3).jpg">
-                <h2 > mon produit</h2>
-                <button type="button">detailles</button>
-               
-               
-            </div>
-        </section>
-        <section class="">
-            <div class="section1" >
-                <img src="th.jpg">
-                <h2 > mon produit</h2>
-            <div class="button">  <button type="button">detailles</button></div>  
-              
-            </div>
-        </section> <section class="">
-            <div class="section1" >
-                <img src="OIP.jpg">
-                <h2 > mon produit</h2>
-               
-                <button type="button">detailles</button>
-               
-            </div>
-        </section> 
+    <div class="nav">
+        <img src="White And Black Modern Abstract Beauty Logo copy.png" class="logo">
+        <h1>vendora</h1>
+        <ul class="list">
+            <li><a href="">Accueil</a></li>
+            <li><a href="">Contacts</a></li>
+            <li><a href="">Produits</a></li>
+            <li><a href=""><i class="fas fa-shopping-cart" style="color: rgb(181, 137, 165); font-size:25px"></i></a></li>
+        </ul>
+    </div>
+    <div class="promo-description">
+        <h2 class="promo-title" style="color: rgb(198, 19, 115);">Vendora Montre</h2>
+        <p class="promo-text"><strong>de remplir vos informations personnelles pour que nous puissions traiter votre commande rapidement et avec précision.</strong></p>
+    </div>
+    <section>
+        <fieldset>
+            <form id="orderForm">
+                <label for="nom">Nom:</label>
+                <input type="text" id="nom" name="nom" required>
+                <span class="error-message" id="nom-error"></span>
+                
+                <label for="prenom">Prénom:</label>
+                <input type="text" id="prenom" name="prenom" required>
+                <span class="error-message" id="prenom-error"></span>
 
-        
+                <label for="codePostal">Code Postal:</label>
+                <input type="text" id="codePostal" name="codePostal">
+                <span class="error-message" id="codePostal-error"></span>
 
-    </main>
+                <label for="N°Tele">N°Tele:</label>
+                <input type="tel" id="N°Tele" name="N°Tele">
+                <span class="error-message" id="N°Tele-error"></span>
+
+                <label for="quantite">Quantité:</label>
+                <input type="number" id="quantite" name="quantite" oninput="calculerTotal()" min="1">
+                <span class="error-message" id="quantite-error"></span>
+
+                <input type="hidden" id="PrixUnitaire" value="100">
+                <label for="total">Total (Dh):</label>
+                <span id="total-display">0</span>
+
+                <div class="btn">
+                    <button type="button" id="buy-now" class="butn" style="width: 40%; margin-top: 20px;"><a href="C:\Users\lenovo i5\OneDrive\Bureau\vendora\projet-vendora-1\presentation.html">Annuler</a></button>
+                    <button type="submit" id="buy-now" class="butn" style="width: 41%; margin-left: 100px;">Commander</button>
+                </div>
+            </form>
+        </fieldset>
+    </section>
     <footer>
         <div class="container">
-            <div class="footer-content" >
-                <h3>Contact</h3>
-                <ul >
+            <div class="footer-content">
+                <h3>NOUS CONTACTER</h3>
+                <ul>
                     <li><i class="fas fa-envelope email-icon"></i> Email : <a href="mailto:vendora@gmail.com" style="color: black;">vendora@gmail.com</a></li>
                     <li><i class="fas fa-phone phone-icon"></i> Phone : <a href="tel:+1232425356" style="color: black;">+123 242 5356</a></li>
                     <li><i class="fas fa-map-marker-alt address-icon"></i> Address : Avenue Abdelmoumen 12, Casablanca</li>
                 </ul>
             </div>
-            
-            
             <div class="footer-content">
-                <h3>Follow Us</h3>
-                <ul class="social-icons">
-                    <li><a href="oresentation.html"><i class="fab fa-facebook" style="color: blue;"> Vendora</i></a></li>
-                    <li><a href="#"><i class="fab  fa-twitter" > Vendora</i></a></li>
+                <h3>SUIVEZ NOUS SUR</h3>
+                <ul class="social-icons" style="gap: 20px;">
+                    <li><a href="presentation.html"><i class="fab fa-facebook" style="color: blue;"> Vendora</i></a></li>
+                    <li><a href="#"><i class="fab fa-twitter"> Vendora</i></a></li>
                     <li><a href="#"><i class="fab fa-linkedin" style="color: hsl(240, 100%, 50%);"> Vendora </i></a></li>
                     <li><a href="#"><i class="fab fa-instagram" style="color: rgb(202, 34, 157);"> Vendora</i></a></li>
                 </ul>
             </div>
-                   
         </div>
-        
     </footer>
     <div class="bottom-bar">
         <p>&copy; 2024 Vendora - Tous droits réservés.</p>
-    </div>
-    
+    </div>   
+
+    <!-- Script pour valider le formulaire -->
+    <script>
+        document.getElementById('orderForm').addEventListener('submit', function(event) {
+            // Empêcher l'envoi du formulaire
+            event.preventDefault();
+
+            // Réinitialiser les messages d'erreur et les bordures
+            document.querySelectorAll('.error-message').forEach(function(el) {
+                el.textContent = '';
+            });
+            document.querySelectorAll('input').forEach(function(el) {
+                el.style.borderColor = '';
+            });
+
+            // Variables de validation
+            var valid = true;
+
+            // Validation du nom
+            var nom = document.getElementById('nom');
+            if (nom.value.trim() === '') {
+                valid = false;
+                document.getElementById('nom-error').textContent = 'Le nom est requis.';
+                nom.style.borderColor = 'red';
+            }
+
+            // Validation du prénom
+            var prenom = document.getElementById('prenom');
+            if (prenom.value.trim() === '') {
+                valid = false;
+                document.getElementById('prenom-error').textContent = 'Le prénom est requis.';
+                prenom.style.borderColor = 'red';
+            }
+
+            // Validation du code postal
+            var codePostal = document.getElementById('codePostal');
+            if (!/^\d{5}$/.test(codePostal.value.trim())) {
+                valid = false;
+                document.getElementById('codePostal-error').textContent = 'Le code postal doit comporter 5 chiffres.';
+                codePostal.style.borderColor = 'red';
+            }
+
+            // Validation du téléphone
+            var tele = document.getElementById('N°Tele');
+            if (!/^\d+$/.test(tele.value.trim())) {
+                valid = false;
+                document.getElementById('N°Tele-error').textContent = 'Le numéro de téléphone doit comporter uniquement des chiffres.';
+                tele.style.borderColor = 'red';
+            }
+
+            // Validation de la quantité
+            var quantite = document.getElementById('quantite');
+            if (quantite.value.trim() === '' || quantite.value <= 0) {
+                valid = false;
+                document.getElementById('quantite-error').textContent = 'La quantité doit être supérieure à 0.';
+                quantite.style.borderColor = 'red';
+            }
+
+            // Si le formulaire est valide, soumettre le formulaire
+            if (valid) {
+                this.submit();
+            }
+        });
+
+        function calculerTotal() {
+            let quantite = document.getElementById("quantite").value;
+            let prixUnitaire = parseFloat(document.getElementById("PrixUnitaire").value);
+            if (!isNaN(quantite) && quantite > 0) {
+                let total = quantite * prixUnitaire;
+                document.getElementById("total-display").textContent = total.toFixed(2);
+            } else {
+                document.getElementById("total-display").textContent = 0;
+            }
+        }
+
+        document.getElementById('N°Tele').addEventListener('input', function () {
+            let tele = this.value;
+            this.value = tele.replace(/\D/g, '');
+
+            if (this.value.length > 10) {
+                this.value = this.value.slice(0, 10);
+            }
+        });
+
+        document.getElementById('codePostal').addEventListener('input', function () {
+            let codePostal = this.value;
+            this.value = codePostal.replace(/\D/g, '');
+
+            if (this.value.length > 5) {
+                this.value = this.value.slice(0, 5);
+            }
+        });
+    </script>
 </body>
 </html>
