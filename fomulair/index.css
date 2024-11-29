@@ -178,7 +178,7 @@ body {
 .nav {
     display: flex;
     align-items: center;
-    margin-bottom: 10%;
+    margin-bottom: 0%;
     background-color: #f4d0d0;
     height: 90px;
     width: 100vw;  
@@ -453,14 +453,14 @@ input[type="text"], input[type="tel"], input[type="number"], input[type="email"]
     border: 1px solid #000000;
     border-radius: 5px;
     font-size: 1em;
-    background-color:transparent;
+    background-color:white;
 }
 
 input[type="text"]:focus, input[type="tel"]:focus, input[type="number"]:focus, input[type="email"]:focus {
     border-color: #f4d0d0;
     outline: none;
     box-shadow: 0 0 5px rgba(244, 208, 208, 0.5);
-    background-color:transparent;
+    background-color:white;
 }
 
 
