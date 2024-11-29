@@ -1,48 +1,158 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulaire</title>
     <link rel="stylesheet" href="index.css">
-    <script src="index.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+        rel="stylesheet">
+    <title>vendora</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
 </head>
+
 <body>
-    
+    <div class="nav">
+        <img src="White And Black Modern Abstract Beauty Logo.png" class="logo">
+        <h1>vendora</h1>
+        <ul class="list">
+            <li><a href="">Accueil</a></li>
+            <li><a href="">Contacts</a></li>
+            <li><a href="">Produits</a></li>
+        </ul>
+    </div>
     <h1>Formulaire de commande </h1>
     <p> Remplir formulaire ci-dessous.</p>
     <!-- formulaire -->
-     <section>
+    <section>
         <fieldset>
-        <form>
-            <h3>Formulaire</h3>
-            <!-- Nom -->
-            <label for="nom">Nom:</label>
-            <input type="text" id="nom" name="nom" required>
-           <!-- Prenom -->
-            <label for="prenom">Prénom:</label>
-            <input type="text" id="prenom" name="prenom" required>
-           <!-- Code Postal -->
-            <label for="codePostal">Code Postal:</label>
-            <input type="text" id="codePostal" name="codePostal" required>
-           <!-- N°tele -->
-            <label for="N°Tele">N°Tele:</label>
-            <input type="tel" id="N°Tele" name="N°Tele" required>
-            <!-- Quantite -->
-            <label for="quantite">Quantité:</label>
-            <input type="number" id="quantite" name="quantite" oninput="calculerTotal()" min="1" >
-            <!-- prix unitaire -->
-             <input type="hidden" id="PrixUnitaire" value="200">
-            <!-- total -->
-            <label for="total">Total (Dh):</label>
-            <input type="text" id="total" name="total" readonly>
-            <!-- annuler commander -->
-            <div class="btn">
-                <input type="reset" value="Annuler" >
-                <input type="submit" value="Commander" class="commander">
+            <div id="myform">
+                <h3>Formulaire</h3>
+                <!-- Nom -->
+                <label for="nom">Nom:</label>
+                <input type="text" id="nom" name="nom">
+                <!-- Prenom -->
+                <label for="prenom">Prénom:</label>
+                <input type="text" id="prenom" name="prenom">
+                <!-- Code Postal -->
+                <label for="codePostal">Code Postal:</label>
+                <input type="text" id="codePostal" name="codePostal">
+                <!-- N°tele -->
+                <label for="tele">N°Tele:</label>
+                <input type="tel" id="tele" name="N°Tele">
+                <!-- Quantite -->
+                <label for="quantite">Quantité:</label>
+                <input type="number" id="quantite" name="quantite" oninput="calculerTotal()" min="1">
+                <!-- prix unitaire -->
+                <input type="hidden" id="PrixUnitaire" value="300">
+                <!-- total -->
+                <label for="total">Total (Dh):</label>
+                <output type="text" id="total" name="total" readonly></output>
+                <!-- annuler commander -->
+                <div class="btn">
+                    <button type="reset"Annuler></button>
+                    <button id="commander">commander</button>
+                </div>
+                <div id="message" style="color: red;"></div>
             </div>
-        </form>
-    </fieldset>  
-    </section>    
+        </fieldset>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <h3>NOUS CONTACTER</h3>
+                <ul>
+                    <li><i class="fas fa-envelope email-icon"></i> Email : <a href="mailto:vendora@gmail.com"
+                            style="color: black;">vendora@gmail.com</a></li>
+                    <li><i class="fas fa-phone phone-icon"></i> Phone : <a href="tel:+1232425356"
+                            style="color: black;">+123 242 5356</a></li>
+                    <li><i class="fas fa-map-marker-alt address-icon"></i> Address : Avenue Abdelmoumen 12, Casablanca
+                    </li>
+                </ul>
+            </div>
+            <div class="footer-content">
+                <h3>SUIVEZ NOUS SUR</h3>
+                <ul class="social-icons" style="gap: 20px;">
+                    <li><a href="oresentation.html"><i class="fab fa-facebook" style="color: blue;"> Vendora</i></a>
+                    </li>
+                    <li><a href="#"><i class="fab  fa-twitter"> Vendora</i></a></li>
+                    <li><a href="#"><i class="fab fa-linkedin" style="color: hsl(240, 100%, 50%);"> Vendora </i></a>
+                    </li>
+                    <li><a href="#"><i class="fab fa-instagram" style="color: rgb(202, 34, 157);"> Vendora</i></a></li>
+                </ul>
+            </div>
+
+        </div>
+
+    </footer>
+
+    <div class="bottom-bar">
+        <p>&copy; 2024 Vendora - Tous droits réservés.</p>
+    </div>
+
+    <script>
+        function calculerTotal() {
+            let quantite = document.getElementById("quantite").value;
+            let prixUnitaire = parseFloat(document.getElementById("PrixUnitaire").value);
+            if (!isNaN(quantite) && quantite > 0) {
+                let total = quantite * prixUnitaire;
+                document.getElementById("total").textContent = total.toFixed(2);
+            } else {
+                document.getElementById("total").textContent = 0;
+            }
+        }
+
+        document.getElementById('tele').addEventListener('input', function () {
+            let tele = this.value;
+            this.value = tele.replace(/\D/g, '');
+
+            if (this.value.length > 10) {
+                this.value = this.value.slice(0, 10);
+            }
+
+            if (this.value.length === 10 && !/^\d+$/.test(this.value)) {
+                alert('You must enter only numbers.');
+            }
+        });
+
+        document.getElementById('codePostal').addEventListener('input', function () {
+            let codePostal = this.value;
+            this.value = codePostal.replace(/\D/g, '');
+
+            if (this.value.length > 5) {
+                this.value = this.value.slice(0, 5);
+            }
+
+            if (this.value.length === 5 && !/^\d+$/.test(this.value)) {
+                alert('You must enter only numbers.');
+            }
+        });
+
+        let confirmOrder = document.getElementById('commander')
+        confirmOrder.addEventListener('click', function () {
+            let messageElement = document.getElementById("message");
+            let nom = document.getElementById("nom").value;
+            let prenom = document.getElementById("prenom").value;
+            let codePostal = document.getElementById("codePostal").value;
+            let tele = document.getElementById("tele").value;
+            let quantite = document.getElementById("quantite").value;
+
+            if (nom === "" || prenom === "" || codePostal === "" || tele === "" || quantite === "") {
+                return messageElement.textContent = "Commande non valide. Veuillez remplir tous les champs.";
+
+            } else {
+                messageElement.textContent = "Commande validée. Merci pour votre achat !";
+                messageElement.style.color = "green";
+                return true;
+            }
+        })
+
+
+    </script>
 </body>
+
 </html>
